@@ -1,10 +1,9 @@
-Send alerts from an IoT Device to IBM Alert Notification Service
+## Send alerts from an IoT Device to IBM Alert Notification Service
 
 ====================================
 
 In this repository you will see how to send an alert from any IoT Device which is connected to the Watson Iot Platform via Node-RED to the IBM Alert Notification Service. Try it out for yourself right now by clicking:
 
-[![Deploy to Bluemix](https://bluemix.net/deploy/button.png)](https://bluemix.net/deploy?repository=https://github.com/ibmets/node-red-bluemix-starter.git)
 
 
 ### Application Overview
@@ -12,7 +11,7 @@ In this repository you will see how to send an alert from any IoT Device which i
 (https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/ANStop.png)
 
 
-##Create your Bluemix Application
+### Create your Bluemix Application
 
 1. Sign in to your Bluemix account and open the catalog (https://console.ng.bluemix.net/catalog/   //the link depends on your region (ng; eu-gb; etc.))
 2. In the left sidebar click on “Boilerplates” (category: Apps)
