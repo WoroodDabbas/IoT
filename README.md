@@ -7,8 +7,7 @@ In this repository you will see how to send an alert from any IoT Device which i
 
 
 ### Application Overview
-
-(https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/ANStop.png)
+![alt text](https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/ANStop.png)
 
 
 ### Create your Bluemix Application
@@ -85,25 +84,25 @@ The data will be processed within Node-RED (a tool for wiring together hardware 
 1. Open your Bluemix console. (https://console.ng.bluemix.net/)
 2. Click on the route to your app.
 3. Click on “Go to your Node-RED flow editor” on the next page and add a new flow by clicking on “+” or on “Flows -> Add” as shown below.
-https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-10-um-17.18.08.png
+![alt text](https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-10-um-17.18.08.png)
 
 4. Copy the flow from the " node red flow " file in this repository and paste it into the clipboard of your Node-RED flow editor as shown below
 5. Now you have to provide your API-Key of your Watson IoT Platform. Open the “IBM IoT” node.
 6. Select “API-Key” in the authetication field and provide the Device Type, Device Id and the Event of the device data in your Watson IoT Platform.
-https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-09-um-16.00.58.png
+![alt text](https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-09-um-16.00.58.png)
 
 7. Click on the pen next to the “API-Key” field and provide the key + token you have created at the beginning of this step.
 8. Click on “Add” and on “Done”
 9. Open the “http request” node, select the method “POST” and provide the Alert Notification Service credentials from Bluemix under “Use basic authentication” (The needed username is displayed as “name” in Bluemix)
 10. If your region in Bluemix is not US-South you have to update the URL as well (e.g. https://ibmnotifybm.eu-gb.mybluemix.net/api/alerts/v1 if your region is UK).
 
-https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-09-um-16.17.21.png
+![alt text](https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-09-um-16.17.21.png)
 
 11. Click on “Done”
 12. Click on “Deploy” in the top right corner.
 
 
-###Conclusion
+### Conclusion
 
 After finishing the previous steps you can send alerts from the simulated device to IBM Alert Notification Service.
 
