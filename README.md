@@ -43,23 +43,41 @@ In this repository you will see how to send an alert from any IoT Device which i
 You can configure an instance of a ClodantNoSQL database and use it as historical data storage.
 
 4.1 If you want to do this click on “Extensions” in the left sidebar of your Watson IoT Platform or on this link: https://uzer22.internetofthings.ibmcloud.com/dashboard/#/extensions  //Replace uzer22 with your Organization ID!
+
 4.2 Click on “Setup” (Historical Data Storage)
+
 4.3 Click on “Select”  (If you have more than one instance of CloudantNoSQL in your Bluemix account select the instance which was created during the second step (Create your Bluemix Application))
+
 4.4 Click on “Done”.
+
 4.5 Now a pop-up will open up and you have to confirm that you want to give access.
+
 4.6 For displaying the historical data within the Watson IoT Platform you can create a board with a line chart. If you want to do this click on “Boards” in the left sidebar.
+
 4.7 Click on “+ Create New Board” on the right
+
 4.8 Provide a name for your board and click “Next”.
+
 4.9 On the next page you don’t have to change anything. Click “Submit”
+
 4.10 Click on the new created board.
+
 4.11 Click on “+ Add New Card”.
+
 4.12 Choose “Line chart”.
+
 4.13 Now click on the check box (1.). After that click on your device in the left sidebar (2.)
+
 4.14 Click on “Connect new data set”
+
 4.15 Fill out the fields with the properties which are shown below and click on “Next”.
+
 4.16 Click on “Settings” and choose the properties which are shown below. After that click on “XL” and on “Next”.
+
 4.17 Click on “Submit”
+
 4.18 Now you see the device data
+
 4.19 If you want to see older data click on “now” and choose the desired date.
 
 ### Create Alerts and send them to IBM Alert Notification Service
