@@ -71,6 +71,7 @@ You can configure an instance of a ClodantNoSQL database and use it as historica
 4.14 Click on “Connect new data set”
 
 4.15 Fill out the fields with the properties which are shown below and click on “Next”.
+![alt text](https://developer.ibm.com/recipes/wp-content/uploads/sites/41/2017/03/Bildschirmfoto-2017-03-08-um-17.23.52.png)
 
 4.16 Click on “Settings” and choose the properties which are shown below. After that click on “XL” and on “Next”.
 
