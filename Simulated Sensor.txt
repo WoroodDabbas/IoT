@@ -1,1 +1,1 @@
-watson-iot-sensor-simulator.mybluemix.net/
+https://quickstart.internetofthings.ibmcloud.com/iotsensor/
