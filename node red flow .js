@@ -7,7 +7,7 @@
         "apiKey": "",
         "inputType": "evt",
         "ruleId": "",
-        "deviceId": "f00acd361070",
+        "deviceId": "",
         "applicationId": "",
         "deviceType": "+",
         "eventType": "+",
@@ -51,11 +51,11 @@
         "type": "twilio out",
         "z": "deb0d57.1c46528",
         "service": "_ext_",
-        "twilio": "161df599.2b29ba",
+        "twilio": "",
         "from": "+17866591963",
-        "number": "+971544921960",
+        "number": "",
         "name": "",
-        "x": 880,
+        "x": 850,
         "y": 180,
         "wires": []
     },
@@ -107,13 +107,5 @@
         "x": 850,
         "y": 60,
         "wires": []
-    },
-    {
-        "id": "161df599.2b29ba",
-        "type": "twilio-api",
-        "z": "",
-        "sid": "ACff456dcb7aa48920a2d39b897412dbb7 ",
-        "from": "+17866591963",
-        "name": ""
     }
 ]
