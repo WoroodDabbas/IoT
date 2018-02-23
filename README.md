@@ -2,8 +2,7 @@
 
 ====================================
 
-In this repository you will see how to send SMS alert from any IoT Device which is connected to the Watson Iot Platform via Node-RED to your mobile phone through Twilio Service. Try it out for yourself right now by clicking:
-
+In this repository you will see how to send SMS alerts from any IoT Device which is connected to the Watson Iot Platform via Node-RED to your mobile phone through Twilio Service. Try it out for yourself right now by Following these steps:
 
 
 
@@ -29,8 +28,9 @@ At this point , you have your own flow on node red and the next step is to fill 
 2. Complete the steps to create your account and name your project.
 3. at this step , wou will see a red button that says get a number . Click on it . This number that you will use when dealing with Twilio APIs. Save it. 
 3. go to your account Dashboard , now you can see your Account Sid and Auth Token. Save them as well . 
-4. Go to your node red flow editor , double click on Twilio node and enter the details from above . 
-5. Click on Deploy.
+4. from Settings , go to Geo permissions and select you country .
+5. Go to your node red flow editor , double click on Twilio node and enter the details from above . 
+6. Click on Deploy.
 
 
 ### Conclusion
@@ -42,3 +42,7 @@ After finishing the previous steps you can send alerts from the simulated device
 (The current thresholds are 15 °C and 30 °C. You can change it in the “Temp Threshold” node in your Node-RED flow editor.)
 
 2. A text message will be recieved on your mobile phone with the corresponding value of the temperature sensor and with other details.
+
+3. You can view live sensor data when you click on the Device id from the simulated sensor page .
+
+THANKS! 
