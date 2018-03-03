@@ -1,4 +1,4 @@
-## Send alerts from an IoT Device to your mobile phone through SMS using Twilio  
+## Send alerts from an IoT Device to your mobile phone via SMS using Twilio  
 
 ====================================
 
