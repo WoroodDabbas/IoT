@@ -1,15 +1,15 @@
-## Send SMS alerts from an IoT Device to your mobile phone using Twilio  
+## Send alerts from an IoT Device to your mobile phone through SMS using Twilio  
 
 ====================================
 
-In this repository you will see how to send SMS alerts from any IoT Device which is connected to the Watson Iot Platform via Node-RED to your mobile phone through Twilio Service. Try it out for yourself right now by Following these steps:
+In this repository you will see how to send alerts from any IoT Device which is connected to the Watson Iot Platform via Node-RED to your mobile phone through Twilio Service via SMS . Try it out for yourself right now by Following these steps:
 
 
 
 
 ### Create your Application on IBM Cloud
 
-1. Sign up to your IBM Cloud account through : ibm.biz/devsummit . then sign in and open the catalog (https://console.ng.bluemix.net/catalog/   //the link depends on your region (ng; eu-gb; etc.))
+1. Sign up to your IBM Cloud account through :http://ibm.biz/iotsheraa , then sign in and open the catalog (https://console.ng.bluemix.net/catalog/   //the link depends on your region (ng; eu-gb; etc.))
 2. In the left sidebar click on “Boilerplates” (category: Apps)
 3. Click on “Internet of Things Platform Starter”
 4. Insert an “App name” (e.g. iot-alertnotification)
@@ -18,9 +18,9 @@ In this repository you will see how to send SMS alerts from any IoT Device which
 
 At this point , you have your own flow on node red and the next step is to fill and edit some of the nodes . 
 
-### Setting up IoT in node
-1. Open the link in the file "Simulated Sensor.txt" on this repositry. Up at the right corner , you will see a string of numbers and letters , this is the Device Id you will enter in the IBM IoT in node . This string is randomly generated and will change when you refresh the simulated sensor page.
-2. Enter the Device Id in the IBM IoT in your node red flow editor.
+### Setting up 'IoT in' node
+ Open the link in the file "Simulated Sensor.txt" on this repositry. Up at the right corner , you will see a string of numbers and letters , this is the Device Id you will enter in the 'IBM IoT in' node . This string is randomly generated and will change when you refresh the simulated sensor page.
+
 
 
 ### Create a Twilio account and setting up Twilio node
