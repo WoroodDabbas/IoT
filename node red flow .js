@@ -1,8 +1,8 @@
 [
     {
-        "id": "b3113a3c.58d91",
+        "id": "3fc8b87e.99338",
         "type": "ibmiot in",
-        "z": "deb0d57.1c46528",
+        "z": "bbfb1ee5.476eb",
         "authentication": "quickstart",
         "apiKey": "",
         "inputType": "evt",
@@ -22,90 +22,90 @@
         "allCommands": false,
         "allFormats": false,
         "qos": "0",
-        "x": 160,
-        "y": 220,
+        "x": 370,
+        "y": 420,
         "wires": [
             [
-                "ba1104d8.f3be6"
+                "5da01f1a.e8869"
             ]
         ]
     },
     {
-        "id": "a33c3df8.8d0268",
+        "id": "a403debd.323c98",
         "type": "function",
-        "z": "deb0d57.1c46528",
+        "z": "bbfb1ee5.476eb",
         "name": "Temp Threshold",
         "func": "var temp = msg.payload.d.temp;\nvar device = msg.payload.d.name;\n\nvar upperThreshold = 30;\nvar lowerThreshold = 15;\n\n\nif ( temp > upperThreshold){\n\tmsg.payload = {\"device\": String(device),\"alertmessage\":\"Temperature is too high: \"+Math.round(String(temp))+\" C\",\"severity\":\"Fatal\",\"type\":\"Problem\",\"temp\":String(temp)};\n\tmsg.reset = {\"reset\":0};\n\treturn [msg,msg.reset];\n}\n\nelse if (temp <= upperThreshold && temp >= lowerThreshold){\n msg.payload = {\"device\": String(device),\"alertmessage\":\"Temperature is normal: \"+Math.round(String(temp))+\" C\",\"severity\":\"Clear\",\"type\":\"Resolution\",\"temp\":String(temp)};\n return [null,msg];\n }\n\nelse if ( temp < lowerThreshold){\n msg.payload = {\"device\": String(device),\"alertmessage\":\"Temperature is too low: \"+Math.round(String(temp))+\" C\",\"severity\":\"Fatal\",\"type\":\"Problem\",\"temp\":String(temp)};\n\tmsg.reset = {\"reset\":0};\n\treturn [msg,msg.reset];\n}",
         "outputs": 1,
         "noerr": 0,
-        "x": 400,
-        "y": 100,
+        "x": 610,
+        "y": 300,
         "wires": [
             [
-                "69373231.78b604"
+                "6373437c.dffb5c"
             ]
         ]
     },
     {
-        "id": "c0582f27.12baa",
+        "id": "1d9d0037.7a897",
         "type": "twilio out",
-        "z": "deb0d57.1c46528",
+        "z": "bbfb1ee5.476eb",
         "service": "_ext_",
         "twilio": "",
         "from": "+17866591963",
         "number": "",
         "name": "",
-        "x": 850,
-        "y": 180,
+        "x": 1060,
+        "y": 380,
         "wires": []
     },
     {
-        "id": "ba1104d8.f3be6",
+        "id": "5da01f1a.e8869",
         "type": "rbe",
-        "z": "deb0d57.1c46528",
+        "z": "bbfb1ee5.476eb",
         "name": "",
         "func": "rbe",
         "gap": "",
         "start": "",
         "inout": "out",
         "property": "payload.d.temp",
-        "x": 240,
-        "y": 120,
+        "x": 450,
+        "y": 320,
         "wires": [
             [
-                "a33c3df8.8d0268"
+                "a403debd.323c98"
             ]
         ]
     },
     {
-        "id": "69373231.78b604",
+        "id": "6373437c.dffb5c",
         "type": "function",
-        "z": "deb0d57.1c46528",
+        "z": "bbfb1ee5.476eb",
         "name": "Message to send",
-        "func": "var locat = \"Dubai\";\nvar alertmessage = msg.payload.alertmessage;\nvar topic = msg.topic;\nvar deviceid = msg.deviceId;\nvar devicetype = msg.deviceType;\nvar sev = msg.payload.severity;\nvar type = msg.payload.type;\nvar temp = msg.payload.temp;\n\nmsg.payload = \n{\n \"Subject\":String(alertmessage)+\" \"+String(deviceid),\n \"\\n\\n Details\": \"Temperature Alert (\"+String(temp)+\" °C) @Device: \"+String(deviceid),\n \"\\n Where\": String(locat),\n \"\\n Severity\": String(sev),\n \"\\n Type\": String(type),\n \"\\n Source\": String(deviceid),\n \"\\n ApplicationsOrServices\": [\n String(topic)\n ],\n /*\"URLs\": [\n {\n \"Description\": \"\",\n \"URL\": \"\"\n }\n ],*/\n\n \n },\n \n\nmsg.headers = {\n Accept: \"application/json\"\n};\n\nreturn msg;",
+        "func": "var locat = \"Dubai\";\nvar alertmessage = msg.payload.alertmessage;\nvar topic = msg.topic;\nvar deviceid = msg.deviceId;\nvar devicetype = msg.deviceType;\nvar sev = msg.payload.severity;\nvar type = msg.payload.type;\nvar temp = msg.payload.temp;\n\nmsg.payload = \n{\n \"Subject\":String(alertmessage)+\" \"+String(deviceid)+ \"\\n\",\n \" Details\": \"Temperature Alert (\"+String(temp)+\" °C) @Device: \"+String(deviceid)+ \"\\n\",\n \" Where\": String(locat)+ \"\\n\",\n \" Severity\": String(sev)+ \"\\n\",\n \" Type\": String(type)+ \"\\n\",\n \" Source\": String(deviceid)+ \"\\n\",\n \"ApplicationsOrServices\": [\n String(topic)\n ],\n /*\"URLs\": [\n {\n \"Description\": \"\",\n \"URL\": \"\"\n }\n ],*/\n\n \n },\n \n\nmsg.headers = {\n Accept: \"application/json\"\n};\n\nreturn msg;",
         "outputs": 1,
         "noerr": 0,
-        "x": 661,
-        "y": 113,
+        "x": 871,
+        "y": 313,
         "wires": [
             [
-                "c0582f27.12baa",
-                "2edde296.d86156"
+                "1d9d0037.7a897",
+                "b4266b49.77f578"
             ]
         ]
     },
     {
-        "id": "2edde296.d86156",
+        "id": "b4266b49.77f578",
         "type": "debug",
-        "z": "deb0d57.1c46528",
+        "z": "bbfb1ee5.476eb",
         "name": "",
         "active": true,
         "tosidebar": true,
         "console": false,
         "tostatus": false,
         "complete": "false",
-        "x": 850,
-        "y": 60,
+        "x": 1060,
+        "y": 260,
         "wires": []
     }
 ]
