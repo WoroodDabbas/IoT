@@ -9,7 +9,7 @@ In this repository you will see how to send alerts from any IoT Device which is 
 
 ### Create your Application on IBM Cloud
 
-1. Sign up to your IBM Cloud account through :http://ibm.biz/iotsheraa , then sign in and open the catalog (https://console.ng.bluemix.net/catalog/   //the link depends on your region (ng; eu-gb; etc.))
+1. Sign up to your IBM Cloud account, then sign in and open the catalog (https://console.ng.bluemix.net/catalog/   //the link depends on your region (ng; eu-gb; etc.))
 2. In the left sidebar click on “Boilerplates” (category: Apps)
 3. Click on “Internet of Things Platform Starter”
 4. Insert an “App name” (e.g. iot-alertnotification)
