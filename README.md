@@ -10,10 +10,10 @@ In this repository you will see how to send alerts from any IoT Device which is 
 ### Create your Application on IBM Cloud
 
 1. Sign up to your IBM Cloud account, then sign in and open the catalog (https://cloud.ibm.com  //the link depends on your region (ng; eu-gb; etc.))
-2. In the left sidebar click on “Boilerplates” (category: Apps)
+2. In the left sidebar click on “Starter kits” 
 3. Click on “Internet of Things Platform Starter”
 4. Insert an “App name” (e.g. iot-alertnotification)
-5. When your app's status is Awake, select the app URL or type it into the browser to open the Node-RED flow editor
+5. When your app is running, select the app URL or type it into the browser to open the Node-RED flow editor
 6. Import the flow from file "node red flow.js" in this repositry into the Node-RED flow editor .
 
 At this point , you have your own flow on node red and the next step is to fill and edit some of the nodes . 
